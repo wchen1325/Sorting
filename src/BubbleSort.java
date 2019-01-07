@@ -1,6 +1,7 @@
 
 public class BubbleSort {
     public static void bubble(int[] arr){
+        int[] arrTemp= arr;
         int swaps = -1;
         while(swaps!= 0){
             swaps=0;
@@ -11,7 +12,12 @@ public class BubbleSort {
                 }
             }
         }
-
+        if(SortingUtil.isSorted(arr)&& SortingUtil.checkSum(arrTemp, arr)) {
+            SortingUtil.printArray(arr);
+        }
+        else{
+            System.out.println("error");
+        }
     }
 
 
